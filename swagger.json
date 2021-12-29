@@ -1,0 +1,236 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Documentação",
+        "description": "",
+        "version": "1.0.0",
+        "contact": {
+            "email": "pedromatheusduarte@gmail.com"
+        }
+    },
+    "paths": {
+        "/nivel": {
+            "post": {
+                "tags": ["Nivel"],
+                "summary":"Criar nivel",
+                "description": "Criando um novo nivel",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nivel":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/nivel/list": {
+            "get": {
+                "tags": ["Nivel"],
+                "summary":"Listar os niveis",
+                "description": "Listar todos os niveis existentes",
+                "responses": {
+                    "200": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/nivel/remove/{id}": {
+            "delete": {
+                "tags": ["Nivel"],
+                "summary":"Remove o nivel",
+                "description": "Remove um nivel existente",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/nivel/edit/{id}": {
+            "put": {
+                "tags": ["Nivel"],
+                "summary":"Editar o nivel",
+                "description": "Editar um nivel existente",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nivel":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Created"
+                    }
+                }
+            }
+        
+    },
+        "/desenvolvedor": {
+            "post": {
+                "tags": ["Desenvolvedor"],
+                "summary":"Cadastro de Desenvolvedor",
+                "description": "Criando um novo Dev",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties":{
+                                    "nome":{
+                                        "type": "string"
+                                    },
+                                    "hobby":{
+                                        "type": "string"
+                                    },
+                                    "idade":{
+                                        "type": "string"
+                                    },
+                                    "sexo":{
+                                        "type": "string"
+                                    },
+                                    "datanascimento":{
+                                        "type": "string"
+                                    },
+                                    "nivel":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/desenvolvedor/list": {
+            "get": {
+                "tags": ["Desenvolvedor"],
+                "summary":"Listar os Desenvolvedores",
+                "description": "Listar todos os desenvolvedores existentes",
+                "responses": {
+                    "200": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/desenvolvedor/edit/{id}": {
+            "put": {
+                "tags": ["Desenvolvedor"],
+                "summary":"Editar o Desenvolvedor",
+                "description": "Editar um desenvolvedor existente",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nome":{
+                                        "type": "string"
+                                    },
+                                    "hobby":{
+                                        "type": "string"
+                                    },
+                                    "idade":{
+                                        "type": "string"
+                                    },
+                                    "sexo":{
+                                        "type": "string"
+                                    },
+                                    "datanascimento":{
+                                        "type": "string"
+                                    },
+                                    "nivel":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/desenvolvedor/remove/{id}": {
+            "delete": {
+                "tags": ["Desenvolvedor"],
+                "summary":"Remove o Desenvolvedor",
+                "description": "Remove um desenvolvedor existente",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Created"
+                    }
+                }
+            }
+        }
+    }
+}
