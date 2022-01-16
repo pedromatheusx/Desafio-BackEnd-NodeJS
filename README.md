@@ -1,13 +1,29 @@
 # Como executar 
 
-# Primeiro passo :
-*docker-compose up* para criar o banco de dados
+## Primeiro passo :
+*Instalar todas as dependências*
 
-# Segundo passo : 
-*npm ou yarn typeorm migration:run* para criar as tabelas no banco de dados
+```yarn install``` 
+```npm run install``` 
 
-# Terceiro passo* : 
-*npm ou yarn dev* para executar a API
+## Segundo passo :
 
-# Depois pode consultar a documentação:
-http://localhost:3333/api-docs
+*Para criar o banco de dados*
+
+```docker-compose up``` 
+
+## Terceiro passo : 
+*Criar as tabelas no banco de dados*
+
+```yarn typeorm migration:run```
+```npm run typeorm migration:run```
+
+## Quarto passo : 
+*Executar a API*
+
+```yarn dev```
+```npm run dev```
+
+# Documentação local:
+
+```http://localhost:3333/api-docs```
